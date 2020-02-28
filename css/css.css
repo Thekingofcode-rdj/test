@@ -1,0 +1,41 @@
+.bt{ background-color: aqua; height: 80px;}
+.bt1{ float: left; margin-top: 20px; margin-left: 15px;}
+.dh{ background: burlywood;}
+.bj{
+	background-color: darkgreen;
+	width: 800px;
+	height: 625px;
+	padding: 20px;
+	float: left;
+}
+.grxx{
+	background-color: aliceblue;
+	width: 680px;
+	height: 300px;
+}
+.tp{
+	padding: 50px;
+}
+.zwjs{
+	 float: right;
+	 padding-right: 200px;
+}
+.bk{
+	background-color: aliceblue;
+	width: 680px;
+	height: 300px;
+	margin-top: 25px;
+}
+.nr{
+	padding: 50px;
+}
+.wz{
+
+	width: 360px; 	
+	background-color: darkorchid;
+	float: right;
+	height: 665px;
+}
+.sm{
+	text-align: center;
+}
