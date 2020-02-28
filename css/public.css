@@ -1,0 +1,15 @@
+*{ margin:0px; padding:0px;}    /*背景大小设定*/
+.clears{
+		clear:both;
+		height:0;
+		line-height:0;
+		overflow:hidden;
+		font-size:0;
+}
+.left{ float:left;}/*左浮动*/
+.right{ float:right;}/*右浮动*/
+a{ text-decoration:none}/*清除a标签下划线*/
+ol,ul,li{ list-style:none;}/*清楚列表样式*/
+image{
+	border:none;
+	}
