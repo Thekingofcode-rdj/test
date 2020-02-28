@@ -4,14 +4,14 @@
 .bj{
 	background-color: darkgreen;
 	width: 800px;
-	height: 625px;
+	height: 325px;
 	padding: 20px;
 	float: left;
 }
 .grxx{
 	background-color: aliceblue;
 	width: 680px;
-	height: 300px;
+	height: 150px;
 }
 .tp{
 	padding: 50px;
@@ -23,7 +23,7 @@
 .bk{
 	background-color: aliceblue;
 	width: 680px;
-	height: 300px;
+	height: 150px;
 	margin-top: 25px;
 }
 .nr{
@@ -34,7 +34,7 @@
 	width: 360px; 	
 	background-color: darkorchid;
 	float: right;
-	height: 665px;
+	height: 365px;
 }
 .sm{
 	text-align: center;
