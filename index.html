@@ -1,66 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="./css/css.css" />
-<link rel="stylesheet" type="text/css" href="./css/public.css" />
-<style type="text/css">
-h1{ text-align:center;}
-wz{ font-size:30px;
-	  background:#00F;}
+<meta charset="utf-8">
+<title>1790005班级作品展示平台</title>
+<link href="css/mystyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/classdata.js" ></script>
+<script src="js/jquery.min.js"></script>
+<script>
+	$().ready(function(e) {
+        $(window.parent.document).find("#cframe").load(function(){ 
+		var main = $(window.parent.document).find("#cframe"); 
+		var thisheight = $(document).height()-10; 
+		main.height(thisheight); 
+		});
+		
+		$.each( cdata, function( key, value ) {
+			//menulist+='<li><a href="'+value.url+'" target="cframe">'+value.no+' '+value.name+'</a></li>';
+			$('#clist').append('<li><a href="'+value.url+'" target="cframe">'+value.no+' '+value.name+'</a></li>');
+		});
+		
+    });
+</script>
+<style>
+	#clist{
+		height: 600px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
 </style>
 </head>
+
 <body>
-<div style="width: 1200px;">
-<div class="bt">
-<article>
-	<div class="bt1"><h1 class="h1">欢迎来到任羿瑞的博客</h1></div>
-</article>
+<div class="left">
+    <div class="logo">
+    	<div><h2>1790005</h2></div>   
+    	<h5>客户端软件开发技术作品评审Beta1</h5>
+    </div>
+    <div class="menu">
+        <ul id="clist">
+        </ul>
+    </div>
 </div>
 
-<div class="dh">
-<section>
-	<article>首页 我的相册 技术博文 休息娱乐</article>
-</section>
-</div>
-
-<div class="bj">
-<div class="grxx">
-<section>
-	<div class="tp">
-		<img src="image/810a19d8bc3eb135a31b8dc9a91ea8d3fc1f44e7.jpg" width="100" height="80"></img>
-		<span class="zwjs">
-			自我介绍
-			<p>姓名:<font color="red">任羿瑞</font></p>
-			<p>年龄:<font color="red">20</font></p>
-			<p>班级:<font color="red">1790005班</font></p>
-		</span>
-	</div>
-	
-</section>
-
-</div>
-
-<div class="bk">
-<section>
-	<h2>博客文章</h2>
-	<p class="nr">今天尽量别交易，一定等风口，人气板块出现了，基本意味着指数也就无大碍了，可以放心交易并且持股了，人气板块缺乏，就一定别进场，指数不好，大部分都不会好的</p>
-</section>
-</div>
-</div>
-
-<div class="wz">
-<section>
-	<h3>学习网站</h3>
-	<a href="http://i.mooc.chaoxing.com/space/index?t=1582863033354"><font color="black">超星学习通</font></a>
-</section>
-</div>
-
-<div class="sm">
-<article> © 2019 任羿瑞 All Rights Reserved.</article>
-</div>
-
+<div class="main">
+	<iframe name="cframe" src="welcome.html" id="cframe" width="100%" height="600px" frameborder="0" scrolling="auto"/>
 </div>
 </body>
+
 </html>
