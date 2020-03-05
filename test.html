@@ -8,16 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="./css/public.css"/>
 	<style type="text/css">
 		#table1{
-			border: #F0F8FF 1px solid;
+			border: inherit 1px solid;
 		}
 		#table1 tr th,td{
-			border: #F0F8FF 1px solid;
+			border: inherit 1px solid;
 		}
 		#table2{
-			border: #F0F8FF 1px solid;
+			border: inherit 1px solid;
 		}
 		#table2 tr th,td{
-			border: #F0F8FF 1px solid;
+			border: inherit 1px solid;
 		}
 		.left{
 			float: left;
@@ -35,11 +35,28 @@
 		.bt{
 			margin-left: 100px;
 		}
+		.clear {
+		
+		clear: both; 
+		height: 0;
+		
+		height: 0;
+		overflow: hidden;
+		}
 	</style>
 </head>
 <body>
 <div class="bg">
-	<h1 class="bt">开始</h1>
+		<div style="width: 800px;">
+		<div id="left" style="float: left; margin-top: 20px;">
+			<h1 class="bt">开始</h1>
+		</div>
+		<div id="right" style="float: right; margin-top: 20px;">
+			<img src="image/user.jpg" >
+		</div>
+		</div>
+		
+	
 	<div class="left">
 		<table id="table1">
 			<tr>
