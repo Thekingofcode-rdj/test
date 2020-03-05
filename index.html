@@ -1,50 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>1790005班级作品展示平台</title>
-<link href="css/mystyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/classdata.js" ></script>
-<script src="js/jquery.min.js"></script>
-<script>
-	$().ready(function(e) {
-        $(window.parent.document).find("#cframe").load(function(){ 
-		var main = $(window.parent.document).find("#cframe"); 
-		var thisheight = $(document).height()-10; 
-		main.height(thisheight); 
-		});
-		
-		$.each( cdata, function( key, value ) {
-			//menulist+='<li><a href="'+value.url+'" target="cframe">'+value.no+' '+value.name+'</a></li>';
-			$('#clist').append('<li><a href="'+value.url+'" target="cframe">'+value.no+' '+value.name+'</a></li>');
-		});
-		
-    });
-</script>
+<title>我的网站</title>
 <style>
-	#clist{
-		height: 600px;
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
+* { margin: 0; padding: 0;}
+a{color: #000000;text-decoration: none;}
+a:hover{color: #FF0000;}
+
+.mytitle{text-align: center;}
+#dowebok { width: 90%; margin: 0 auto; font-size: 14px;}
+#dowebok li { float: left; width: 30%; margin-left: 1%; padding-top: 1%;}
+#dowebok li img { width: 100%;}
+#dowebok li .dt { width: 100%;text-align: center;}
+#dowebok li{list-style-type: none;}
 </style>
 </head>
 
 <body>
-<div class="left">
-    <div class="logo">
-    	<div><h2>1790005</h2></div>   
-    	<h5>客户端软件开发技术作品评审Beta1</h5>
-    </div>
-    <div class="menu">
-        <ul id="clist">
-        </ul>
-    </div>
-</div>
+	<h1 class="mytitle">179000514 任羿瑞</h1>
+	<ul id="dowebok">
+		<li>
+			<div><a href="#"><img data-original="img/tibet-1.jpg" src="image/tibet-1.jpg" alt="图片1"></a></div>
+			<div class="dt"><a href="NewFile.html">作品1：普通网页布局展示</a></div>
+		</li>
+		<li>
+			<div><img data-original="img/tibet-2.jpg" src="image/tibet-2.jpg" alt="图片2"></div>
+			<div class="dt">作品2：普通网页布局展示</div>
+		</li>
+		<li>
+			<div><img data-original="img/tibet-1.jpg" src="image/tibet-1.jpg" alt="图片1"></div>
+			<div class="dt">作品1：普通网页布局展示</div>
+		</li>
+		<li>
+			<div><img data-original="img/tibet-2.jpg" src="image/tibet-2.jpg" alt="图片2"></div>
+			<div class="dt">作品2：普通网页布局展示</div>
+		</li>
+		<li>
+			<div><img data-original="img/tibet-1.jpg" src="image/tibet-1.jpg" alt="图片1"></div>
+			<div class="dt">作品1：普通网页布局展示</div>
+		</li>
+		<li>
+			<div><img data-original="img/tibet-2.jpg" src="image/tibet-2.jpg" alt="图片2"></div>
+			<div class="dt">作品2：普通网页布局展示</div>
+		</li>
+	</ul>
 
-<div class="main">
-	<iframe name="cframe" src="welcome.html" id="cframe" width="100%" height="600px" frameborder="0" scrolling="auto"/>
-</div>
 </body>
-
 </html>
