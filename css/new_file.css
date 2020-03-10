@@ -1,0 +1,54 @@
+.myweb{
+		width: 1003px;
+		margin: 0 auto;
+	}
+.left{float: left;}
+.right{float: right;}
+.center{float: left;}
+.myweb .head .version_info{
+		height: 25px;
+		line-height: 25px;
+		padding-right: 20px;
+		text-align: right;
+		font-size: 12px;
+		background-image: url(image/top1.jpg);
+		margin-bottom: 1px;
+	}
+.myweb .main .right .r1{
+		background-image: url(../image/r1.jpg);
+		height: 157px;
+		line-height: 22px;
+		width: 230px;
+	}
+.r1 ul{
+		padding: 0px;
+	}
+.r1 ul li{
+		list-style-type: none;
+		height: 22px;
+		line-height: 80px;
+		padding-left: 20px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+.myweb .main .right .r2{
+			background-image: url(../image/news.jpg);
+			height: 157px;
+			line-height: 22px;
+			width: 230px;
+		}
+.r2 ul{
+			padding: 0px;
+		}
+.r2 ul li{
+			list-style-type: none;
+			height: 22px;
+			line-height: 80px;
+			padding-left: 20px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+.r7{
+	margin-left:10px;
+	margin-top: 18px;
+}

@@ -1,0 +1,36 @@
+#table1{
+			border: inherit 1px solid;
+		}
+		#table1 tr th,td{
+			border: inherit 1px solid;
+		}
+		#table2{
+			border: inherit 1px solid;
+		}
+		#table2 tr th,td{
+			border: inherit 1px solid;
+		}
+		.left{
+			float: left;
+			margin-left: 100px;
+			margin-top: 30px;
+		}
+		.right{
+			float: right;
+			margin-top: 30px;
+		}
+		.bg{
+			background-image: url(../image/bg1.jpg);
+			height: 1000px;
+		}
+		.bt{
+			margin-left: 100px;
+		}
+		.clear {
+		
+		clear: both; 
+		height: 0;
+		
+		height: 0;
+		overflow: hidden;
+		}
