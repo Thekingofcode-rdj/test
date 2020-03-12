@@ -1,0 +1,53 @@
+#login{
+	width: 900px;
+	height: 900px;
+	background-image: url(../image/111.jpg);
+	padding-top: 250px;
+	padding-left: 1020px;
+	background-repeat: no-repeat;
+}
+#login .myform{
+	width: 380px;
+	height: 400px;
+	background-color: #ebf8fe;
+}
+#login .myform div{
+	height: 80px;
+}
+#login .myform .dl{
+	font-size: 24px;
+	font-family: "宋体";
+	color: #0000FF;
+	text-align: center;
+}
+#login .myform img{
+	height: 33px;
+}
+#login .myform .uname{
+	padding-left: 20px;
+}
+#login .myform .uname input{
+	height: 30px;
+	width: 250px;
+}
+#login .myform .upass{
+	padding-left: 20px;
+}
+#login .myform .upass input{
+	height: 30px;
+	width: 250px;
+}
+#login .myform .upass input{
+	height: 30px;
+}
+#login .myform .jzmm{
+	padding-left: 20px;
+}
+#login .myform .usubmit{
+	padding-left: 20px;
+}
+#login .myform .usubmit input{
+	width: 295px;
+	height: 30px;
+	background-color: #0000FF;
+}

@@ -15,12 +15,32 @@
 	background-color: #0000FF;
 	padding: 50px;
 }
-
 .nav a{
 	text-decoration: none;
 	color: #F0F8FF;
 }
-.nav ul{
+.first_menu .second_menu li{
+	background-color: #00FFFF;
+	border: 1px solid #aa007f;
+	line-height: 25px;
+	margin-top: 0px;
+	text-indent: 10px;
+	display: none;
+}
+.m:hover{
+	background-color: #00FFFF;
+	height: 50px;
+}
+.first_menu .second_menu li a:hover{
+	color: #AA0000;
+}
+.first_menu .second_menu{
+	margin-top: 6px;
+}
+.first_menu>li:hover li{
+	display: block;
+}
+.nav .first_menu{
 	padding: 0 0 0 15px;
 	background-color: #0000FF;
 	margin: 0 auto;
@@ -28,19 +48,19 @@
 	height: 50px;
 	line-height: 43px;
 }
-.nav ul li{
-	width: 80px;
+.nav .first_menu li{
+	width: 100px;
 	float: left;
 	text-align: center;
 	font-size: 15px;
 	font-weight: bold;
 }
-.sousuol{
-	margin-top: 7px;
+.searchl{
+	margin-top: 10px;
 }
-.sousuor{
-	margin-top: 7px;
-	padding-left: 109px;
+.searchr{
+	margin-top: 10px;
+	margin-left: 34px;
 }
 .message{
 	height: 200px;
