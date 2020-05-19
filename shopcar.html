@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="./css/shoppingcart.css"/>
+		<script src="./js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//179000514 任羿瑞A
+				function total(){
+					var price = $(".price");
+					var num = $(".product-num");
+					var all_price = 0;
+					for(var i = 0;i <= num.length;i++){
+						if($(".product-em").eq(i).hasClass("product-xz")){
+							all_price += parseInt(price.eq(i).html()) * parseInt(num.eq(i).val());
+						}
+					}
+					$(".all-price").html(all_price);
+				}
+				total();
+				//增加商品
+				$(".product-add").click(function(){
+					//单品数增加
+					var num = parseInt($(this).siblings(".product-num").val());
+					var sum = parseInt(num + 1);
+					$(this).siblings(".product-num").val(sum);
+					//价格增加
+					var price = parseInt($(this).parent(".product_gw").parents(".product-amount").siblings(".product-price").find(".price").data("price"));
+					var all = parseInt(price * sum);
+					$(this).parent(".product_gw").parents(".product-amount").siblings(".product-price").find(".price").text(all);
+					total();
+				});
+				
+				//减少商品
+				$(".product-jian").click(function(){
+					var num = parseInt($(this).siblings(".product-num").val());
+					if(num > 1){
+						//个数减少
+						var sum = parseInt(num - 1);
+						$(this).siblings(".product-num").val(sum);
+						//价格减少
+						var price = parseInt($(this).parent(".product_gw").parents(".product-amount").siblings(".product-price").find(".price").data("price"));
+						var all = parseInt(price * sum);
+						$(this).parent(".product_gw").parents(".product-amount").siblings(".product-price").find(".price").text(all);
+						
+					}else{
+						alert("单品数量必须大于等于1件");
+					}
+					total();
+				});
+				
+				//删除商品
+				$(".product-del").click(function(){
+					if(confirm("是否删除商品")){
+						$(this).parent(".product-sx").parents(".product-box").remove();
+						if($(".product-xz").length == 0){
+							$(".product-sett").addClass("product-sett-a");
+							$(".all-xz").children(".product-all-qx").html("全选");
+						}
+						
+						//选择了多少件
+						var selNum = $(".product-all-sl").html();
+						$(".product-all-sl").html(selNum * 1 - 1);
+						
+						//删除了全部商品后，打开新的页面
+						if($(".product-box").length == 0){
+							$(".kon-cat").css({"display":"block"});
+						}
+					}
+					total();	
+				});
+				
+				//选择
+				$(".product-ckb").click(function(){
+					//当没选择时，发生的事件
+					if(! $(this).children(".product-em").hasClass("product-xz")){
+						//点击变成已选择
+						$(this).children(".product-em").addClass("product-xz");
+						//全选变已选
+						$(".all-xz").children(".product-all-qx").html("已选");
+						//结算按钮变红
+						$(".product-sett").removeClass("product-sett-a");
+						//选择了多少件
+						var selNum = $(".product-all-sl").html();
+						$(".product-all-sl").html(selNum * 1 + 1);
+					//当已选择时，发生的事件
+					}else{
+						//点击变成未选择时的样式
+						$(this).children(".product-em").removeClass("product-xz");
+						//当没有有选择商品时
+						if(! $(".product-em").hasClass("product-xz")){
+							//已选变全选
+							$(".all-xz").children(".product-all-qx").html("全选");
+						}
+						//结算按钮变为灰色
+						$(".product-sett").addClass("product-sett-a");
+						//选择了多少件
+						var selNum = $(".product-all-sl").html();
+						$(".product-all-sl").html(selNum * 1 - 1);
+					}
+					total();
+				});
+				
+				//全选
+				$(".product-all").click(function(){
+					//当全选框没有被选择时
+					if(! $(this).children("em").hasClass("product-all-on")){
+						$(this).children("em").addClass("product-all-on")
+						$(".product-em").addClass("product-xz");
+						$(".all-xz").children(".product-all-qx").html("已选");
+						$(".product-sett").removeClass("product-sett-a");
+						for(var i = 0;i <= $(".product-ckb").length;i++){
+							$(".product-all-sl").html(i);
+						}
+					}else{
+						//当全选框已被选择,再次点击时的事件
+						$(".product-sett").addClass("product-sett-a");
+						$(".all-xz").children(".product-all-qx").html("全选");
+						$(this).children("em").removeClass("product-all-on")
+						$(".product-em").removeClass("product-xz");
+						$(".product-all-sl").html(0);
+					}
+					total();
+				});
+				
+			});
+		</script>
+		<div class="body">
+			<div class="shop"><i></i><span>我的购物车</span></div>
+			<div class="product">
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em"></em></div>
+					<div class="product-sx">
+						<a href="###">
+							<img src="image/a3.png" class="product-img" />
+							<span class="product-name">酷冷至尊(Cooler Master)T610P CPU风冷散热器</span>
+						</a>
+						<span class="product-price">¥&thinsp;<span class="price" data-price="299">299</span></span>
+						<div class="product-amount">
+							<div class="product_gw">
+								<em class="product-jian">-</em>
+								<input type="text" value="1" class="product-num"/>
+								<em class="product-add">+</em>
+							</div>
+						</div>
+						<div class="product-del"><img src="image/deleteico.png" /></div>
+					</div>
+				</div>
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em"></em></div>
+					<div class="product-sx">
+						<a href="###">
+							<img src="image/a1.png" class="product-img" />
+							<span class="product-name">游戏悍将 35英寸曲面电竞显示器21:9带鱼屏准4K游戏显示器</span>
+						</a>
+						<span class="product-price">¥&thinsp;<span class="price" data-price="2099">2099</span></span>
+						<div class="product-amount">
+							<div class="product_gw">
+								<em class="product-jian">-</em>
+								<input type="text" value="1" class="product-num"/>
+								<em class="product-add">+</em>
+							</div>
+						</div>
+						<div class="product-del"><img src="image/deleteico.png" /></div>
+					</div>
+				</div>
+
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em"></em></div>
+					<div class="product-sx">
+						<a href="###">
+							<img src="image/a2.png" class="product-img" />
+							<span class="product-name">技嘉（GIGABYTE） 2080TURBO OC 8GC</span>
+						</a>
+						<span class="product-price">¥&thinsp;<span class="price" data-price="1099">1099</span></span>
+						<div class="product-amount">
+							<div class="product_gw">
+								<em class="product-jian">-</em>
+								<input type="text" value="1" class="product-num"/>
+								<em class="product-add">+</em>
+							</div>
+						</div>
+						<div class="product-del"  id="del3"><img src="image/deleteico.png" /></div>
+					</div>
+				</div>
+
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em"></em></div>
+					<div class="product-sx">
+						<a href="###">
+							<img src="image/a4.png" class="product-img" />
+							<span class="product-name">AMD 锐龙 5 2600X 处理器 (R5) 6核12线程 AM4 </span>
+						</a>
+						<span class="product-price">¥&thinsp;<span class="price" data-price="1299">1299</span></span>
+						<div class="product-amount">
+							<div class="product_gw">
+								<em class="product-jian">-</em>
+								<input type="text" value="1" class="product-num"/>
+								<em class="product-add">+</em>
+							</div>
+						</div>
+						<div class="product-del" id="del4"><img src="image/deleteico.png" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="product-js">
+				<div class="product-al">
+					<div class="product-all">
+						<em class=""></em>
+					</div>
+					<div class="all-xz"><span class="product-all-qx">全选</span>
+						<div class="all-sl">(<span class="product-all-sl">0</span>)</div>
+					</div>
+				</div>
+				<a href="#" class="product-sett product-sett-a" id="jiesuan">结算</a>
+				<div class="all-product"><span class="all-product-a">¥&thinsp;<span class="all-price">299</span></span></div>
+
+			</div>
+		</div>
+		<!--购物车空-->
+		<div class="kon-cat">
+			<div class="catkon">
+				<div class="kon-box">
+					<div class="kon-hz">
+						<img src="image/cart-air.png" />
+						<span class="kon-wz">购物车什么都没有</span>
+						<a href="###" class="kon-lj">去逛逛</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
