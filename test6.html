@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JqueryGame</title>
+    <script src="./js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<div>179000503 蒲亚军</div>
+
+<div style="color: white">单击右键移动  左键双击人物变身  再双击变回   </div>
+<body style="width: 100%;height: 100%; background-color:#000000">
+<div class="all" style="position: relative">
+    <img src="image/stand_right.png" class="player"  style="position:absolute;" width="201" height="201">
+    <img src="image/pet.gif" class="pet" style="margin: 500px;">
+</div>
+
+
+<script>
+    window.document.oncontextmenu = function(){
+
+        return false;
+
+    }
+    $(function () {
+
+        // console.log($(".player")[0].id)
+
+        $(document).mousedown(function(e){
+
+            //获取player坐标
+            let playX = $(".player").offset().left;
+            let playY = $(".player").offset().top;
+            console.log(playX,playY);
+            //获取buff坐标
+            let petX = $(".pet").offset().left;
+            let petY = $(".pet").offset().top;
+            console.log(petX,petX)
+            //获取当前鼠标的坐标值
+            let x = e.clientX;
+            let y = e.clientY;
+            console.log(x,y)
+            //角色移动方向判断
+            if ( 3 == e.which){
+                if ($(".player")[0].id != 'bs'){
+                    //判断 没变身之前的 方向
+                    if(playX +100 > x ){
+                        $(".player").attr("src",'image/player_left.gif');
+
+                        $(".player").stop().animate(
+                            {
+                                left: x - 100,
+                                top: y - 130,
+                            },
+                            2000,
+                            function () {
+                                $(".player").attr("src",'image/stand_left.png');
+                            }
+                        );
+                    }else{
+                        $(".player").attr("src",'image/player_right.gif' );
+                        $(".player").stop().animate(
+                            {
+                                left: x - 100,
+                                top: y - 130,
+                            },
+                            2000,
+                            function () {
+                                $(".player").attr("src",'image/stand_right.png');
+                            }
+                        );
+
+                    }
+                }else{
+                    //判断变身后
+                    if(playX +100 > x ){
+                        $(".player").attr("src",'image/playerbig_left.gif');
+                        $(".player").stop().animate(
+                            {
+                                left: x - 100,
+                                top: y - 130,
+                            },
+                            1000,
+                        );
+                    }else{
+                        $(".player").attr("src",'image/playerbig_right.gif' );
+                        $(".player").stop().animate(
+                            {
+                                left: x - 100,
+                                top: y - 130,
+                            },
+                            1000,
+                        );
+                    }
+                }
+            }else if (1 == e.which){
+                $(".player").click(function () {
+                    if($(".player")[0].id != "bs"){
+                        $(".player").attr("src",'image/player2.gif');
+                        $(".player").attr("id",'bs');
+                    }else{
+                        $(".player").attr("src",'image/stand_right.png');
+                        $(".player").attr("id","pt");
+                    }
+                })
+            }
+        });
+    })
+</script>
+</body>
+</html>

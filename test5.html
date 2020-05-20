@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/tabdemo.css"/>
+		<script src="./js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="tabox">
+		      <div class="hd">
+		        <ul>
+		          <li class="on">疯狂抢购</li>
+		          <li class="">猜您喜欢</li>
+		          <li class="">热卖商品</li>
+		          <li class="">热评商品</li>
+		          <li class="">新品上架</li></ul>
+		      </div>
+		      <div class="bd">
+		        <ul class="lh">
+		          <img src="image/p1.jpg" >
+		        </ul>
+		        <ul class="lh" style="display: none;">
+		          <img src="image/p2.jpg" >
+		        </ul>
+		        <ul class="lh" style="display: none;">
+		          <img src="image/p3.jpg" >
+		        </ul>
+		        <ul class="lh" style="display: none;">
+		          <img src="image/p4.jpg" >
+		        </ul>
+		        <ul class="lh" style="display: none;">
+		          <img src="image/p5.jpg" >
+		        </ul>
+		      </div>
+		    </div>
+			<script type="text/javascript">
+				$(function(){
+					$(".hd li").each(function(index){
+						$(this).click(function(){
+							$(this).siblings("").removeClass("on");
+							$(this).addClass("on");
+							$(".lh").each(function(i){
+								if(index == i){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							});
+						});
+					});
+				});
+			</script>
+	</body>
+</html>
