@@ -17,7 +17,7 @@
 					var all_price = 0;
 					for(var i = 0;i <= num.length;i++){
 						if($(".product-em").eq(i).hasClass("product-xz")){
-							all_price += parseInt(price.eq(i).html()) * parseInt(num.eq(i).val());
+							all_price = all_price + parseInt(price.eq(i).data("price")) * parseInt(num.eq(i).val());
 						}
 					}
 					$(".all-price").html(all_price);
