@@ -72,17 +72,17 @@ border-radius:20px;/*适配所有浏览器(需要放在最后面，类似于if..
 /*********** 通知公告 ***********/
 .bk02_list02{ width:376px; float:left;}
 .bk02_list02 ul{width:376px;}
-.bk02_list02 ul li{width:376px;height:32px;background:url(../images/ico01.png) no-repeat left center;}
+.bk02_list02 ul li{width:376px;height:32px;background:url(../image/ico01.png) no-repeat left center;}
 .bk02_list02 ul li a{ color:#272727;font:14px/32px "微软雅黑"; margin-left:18px; width:235px; display:block; overflow:hidden; height:32px;}
 .bk02_list02 ul li a:hover{ color:#F00; text-decoration:underline;}
 .bk02_list02 ul li span{ float:right;font:13px/32px "微软雅黑"; color:#a5a5a5;}
 
 
 /*********** bk03 ***********/
-.bk03_w{ width:100%; height:255px;background:url(../images/ztzl_bt.png) no-repeat top center; margin-bottom:63px;}
+.bk03_w{ width:100%; height:255px;background:url(../image/ztzl_bt.png) no-repeat top center; margin-bottom:63px;}
 .bk03{ width:1200px;}
 .bk03 .hd{ height:255px; float:left; position:relative; }
-.bk03 .hd .prev,.bk03 .next{ display:block; position:absolute;top:13px;left:1106px; width:33px; height:33px;background:url(../images/rl_ico.png) no-repeat; cursor:pointer;   }
+.bk03 .hd .prev,.bk03 .next{ display:block; position:absolute;top:13px;left:1106px; width:33px; height:33px;background:url(../image/rl_ico.png) no-repeat; cursor:pointer;   }
 .bk03 .hd .next{ left:1153px; bottom:0px; background-position:top right; }
 
 .bk03 .bd{ width:1200px;position:absolute;margin-top:93px;}
@@ -106,15 +106,15 @@ border-radius:200px;/*适配所有浏览器(需要放在最后面，类似于if.
 .mhxx ul li a:hover span{ color:#0a3f89;transition-duration:500ms;-webkit-transition-duration:500ms;}
 
 .mhxx ul li .mhxx_ico01 p{border:solid 8px #fff;background:#fff url(../image/mhxx_ico01.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
-.mhxx ul li .mhxx_ico01:hover p{ border:solid 8px #ccd7e7;background:#0a3f89 url(../images/mhxx_ico01.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
+.mhxx ul li .mhxx_ico01:hover p{ border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico01.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico02 p{border:solid 8px #fff; background:#fff url(../image/mhxx_ico02.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
-.mhxx ul li .mhxx_ico02:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../images/mhxx_ico02.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
+.mhxx ul li .mhxx_ico02:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico02.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico03 p{border:solid 8px #fff; background:#fff url(../image/mhxx_ico03.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
-.mhxx ul li .mhxx_ico03:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../images/mhxx_ico03.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
+.mhxx ul li .mhxx_ico03:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico03.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico04 p{border:solid 8px #fff; background:#fff url(../image/mhxx_ico04.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
-.mhxx ul li .mhxx_ico04:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../images/mhxx_ico04.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
+.mhxx ul li .mhxx_ico04:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico04.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico05 p{border:solid 8px #fff; background:#fff url(../image/mhxx_ico04.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
-.mhxx ul li .mhxx_ico05:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../images/mhxx_ico05.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
+.mhxx ul li .mhxx_ico05:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico05.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico06 p{border:solid 8px #fff; background:#fff url(../image/mhxx_ico06.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 .mhxx ul li .mhxx_ico06:hover p{border:solid 8px #ccd7e7;background:#0a3f89 url(../image/mhxx_ico06.png) no-repeat center;transition-duration:500ms;-webkit-transition-duration:500ms;}
 

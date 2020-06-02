@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="referrer"  content="no-referrer"/>
+		<title></title>
+		<script src="./js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#div1{
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			section{
+				width: 30%;
+				text-align: center;
+				color: #EE2200;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" id="mybutton">获取电影详情</button>
+		<div id="div1">
+			
+		</div>
+		
+	<script type="text/javascript">
+		$(function(){
+			let img = document.querySelector("img");
+			$("#mybutton").click(function(){
+				$.ajax({
+					method:"get",	
+					url:"https://douban.uieee.com/v2/movie/in_theaters?start=0&count1&city=重庆",
+					dataType:"jsonp",
+					success:function(r){
+						for(let i = 0;i < r.subjects.length;i++){
+							let title = r.subjects[i].title;
+							let average = r.subjects[i].rating.average;
+							let images = r.subjects[i].images.small;
+							$("#div1").append("<br><section><img src=" + images + "></br><a href='#'><br>" + title + "</br></a>" + average + "</section>");
+						}
+						 
+					}
+					
+				});
+			});
+		});
+	</script>
+	</body>
+</html>

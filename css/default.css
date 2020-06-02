@@ -3,7 +3,7 @@
 
 /***** 全局样式 Global-Style *****/
 *						{margin: 0; padding: 0;}
-html,body				{margin: 0; font: 12px/160%,"宋体"; background:url(../images/0.png) center top no-repeat;}
+html,body				{margin: 0; font: 12px/160%,"宋体"; background:url(../image/0.png) center top no-repeat;}
 form,ul,li,dl,dt,dd		{margin: 0; padding: 0; list-style: none;}
 img						{border:none;}
 
@@ -20,7 +20,7 @@ a:hover		{color: #ff0000;}
 
 
 /***** 顶部 *****/
-#top_w{position:absolute; z-index:9999; width:100%;height:176px; background:url(../images/top_bg.png) repeat top left;}
+#top_w{position:absolute; z-index:9999; width:100%;height:176px; background:url(../image/top_bg.png) repeat top left;}
 #top_w .top_t{ width:1200px; height:116px;}
 .top_logo{ width:568px; height:116px; float:left;}
 
@@ -37,7 +37,7 @@ a:hover		{color: #ff0000;}
 -o-border-radius:20px;/*适配opera浏览器*/
 border-radius:20px;/*适配所有浏览器(需要放在最后面，类似于if..else if..else..)*/}
 .lanBox{position: absolute;top:8px;}
-.lanBox h3{ height:19px;font:12px/19px "宋体";font-weight:normal; width:53px; padding-left:26px; color:#81a1c8; cursor: pointer; background:url(../images/top_sjx.png) no-repeat 10px center ; text-align:left; border:1px #81a1c8 solid;
+.lanBox h3{ height:19px;font:12px/19px "宋体";font-weight:normal; width:53px; padding-left:26px; color:#81a1c8; cursor: pointer; background:url(../image/top_sjx.png) no-repeat 10px center ; text-align:left; border:1px #81a1c8 solid;
 -webkit-border-radius:20px;/*适配以webkit为核心的浏览器(chrome、safari等)*/
 -moz-border-radius:20px;/*适配firefox浏览器*/
 -ms-border-radius:20px;/*适配IE浏览器*/
@@ -52,7 +52,7 @@ border-radius:20px;/*适配所有浏览器(需要放在最后面，类似于if..
 .top_kh{ width:296px; height:47px;}
 
 /***** nav *****/
-.navBar_w{position:relative; z-index:99;height:60px;background:url(../images/top_nav_bg.png) repeat left top;}
+.navBar_w{position:relative; z-index:99;height:60px;background:url(../image/top_nav_bg.png) repeat left top;}
 .navBar{ width:1200px;}
 .nav_top{ position:relative; width:980px; float:left;}
 .nav_top a{ color:#333;  }
@@ -70,8 +70,8 @@ border-radius:20px;/*适配所有浏览器(需要放在最后面，类似于if..
 /*** 搜索 ***/
 #search { float:right;display:block;width:218px;height:32px; margin-top:14px;}
 #search li.ipt{ float:left;width:189px; height:40px;}
-#search li.ipt .keyword{ float:left;display:block; border:none;width:169px;padding-left:20px;height:32px;font:13px/32px "微软雅黑"; color:#95b4df;background:url(../images/ss_txt.png) no-repeat left center;}
-#search li.btn{ float:right;cursor:pointer;width:29px;height:32px; display:block;background:url(../images/ss_fdj.png) no-repeat left center; }
+#search li.ipt .keyword{ float:left;display:block; border:none;width:169px;padding-left:20px;height:32px;font:13px/32px "微软雅黑"; color:#95b4df;background:url(../image/ss_txt.png) no-repeat left center;}
+#search li.btn{ float:right;cursor:pointer;width:29px;height:32px; display:block;background:url(../image/ss_fdj.png) no-repeat left center; }
 
 
 /***** banner *****/
@@ -87,7 +87,7 @@ border-radius:20px;/*适配所有浏览器(需要放在最后面，类似于if..
 
 
 /***** 当前位置 *****/
-.position { width:814px; padding-left:30px;background:#fafbfd url(../images/add_ico01.png) 13px center no-repeat; height:38px;font:12px/38px "微软雅黑";color:#787777; height:38px; margin-top:20px;margin-bottom:30px; 
+.position { width:814px; padding-left:30px;background:#fafbfd url(../image/add_ico01.png) 13px center no-repeat; height:38px;font:12px/38px "微软雅黑";color:#787777; height:38px; margin-top:20px;margin-bottom:30px; 
 box-shadow:0px 0px 3px #e3e3e3;/*兼容operaspace:nowrap*/
 -moz-box-shadow:0px 0px 3px #e3e3e3;/*兼容firefox*/
 -webkit-box-shadow:0px 0px 3px #e3e3e3;/*兼容safari或chrome*/
@@ -97,8 +97,8 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e3e3e3,direction=120,stre
 
 /***** 机构设置当前位置 *****/
 .jgsz_position { width:1100px;background:#f4f8fd; height:58px;font:12px/58px "微软雅黑";color:#787777;margin-top:20px;margin-bottom:50px;}
-.jgsz_position h3{ width:198px;  height:58px; float:left;text-align:center;font:24px/58px "微软雅黑";color:#fff;background:#05387e url(../images/ej_logo.png) 3px center no-repeat; }
-.jgsz_position p{ float:right; padding-left:20px; height:58px; margin-right:20px;background:url(../images/jgsz_addico.png) left center no-repeat;font:13px/58px "微软雅黑"; height:58px;color:#05387e;}
+.jgsz_position h3{ width:198px;  height:58px; float:left;text-align:center;font:24px/58px "微软雅黑";color:#fff;background:#05387e url(../image/ej_logo.png) 3px center no-repeat; }
+.jgsz_position p{ float:right; padding-left:20px; height:58px; margin-right:20px;background:url(../image/jgsz_addico.png) left center no-repeat;font:13px/58px "微软雅黑"; height:58px;color:#05387e;}
 .jgsz_position p a{ font:13px/58px "微软雅黑"; height:58px;color:#05387e; text-decoration:none; }
 .jgsz_position p a:hover{ color:#CE0000;text-decoration:underline;}  
 
@@ -109,10 +109,10 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e3e3e3,direction=120,stre
 
 /*********** 院系导航 ***********/
 .bk02_list03{ width:273px; float:right;}
-.bk02_list03 h3{ width:273px; height:46px;font:18px/46px "微软雅黑"; color:#fff; font-weight:bold; background:#0a3f89 url(../images/bt_line.png) no-repeat center; text-align:center;}
+.bk02_list03 h3{ width:273px; height:46px;font:18px/46px "微软雅黑"; color:#fff; font-weight:bold; background:#0a3f89 url(../image/bt_line.png) no-repeat center; text-align:center;}
 .bk02_list03 ul li{ width:273px; height:37px;background:#efefef;}
-.bk02_list03 ul li a{width:215px; height:37px; padding-left:58px; font:15px/37px "微软雅黑"; color:#171717; display:block;background:url(../images/ico02.jpg) no-repeat 32px center;}
-.bk02_list03 ul .bk02_list03_ts{ width:273px; height:37px;background:#e5e5e5 url(../images/ico02.png) no-repeat center;}
+.bk02_list03 ul li a{width:215px; height:37px; padding-left:58px; font:15px/37px "微软雅黑"; color:#171717; display:block;background:url(../image/ico02.jpg) no-repeat 32px center;}
+.bk02_list03 ul .bk02_list03_ts{ width:273px; height:37px;background:#e5e5e5 url(../image/ico02.png) no-repeat center;}
 .bk02_list03 ul .bk02_list03_ts a{ width:215px; height:37px; padding-left:58px;}
 .bk02_list03 ul li a:hover{ color:#0a3f89;}
 
